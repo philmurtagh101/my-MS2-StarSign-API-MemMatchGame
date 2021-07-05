@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,23 @@
     <title>Star Sign Memory Matching Game</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header>
-        <h1>Star Sign Memory Matching Game <span></h1>
+
+        <h1>Star Sign Memory Matching Game </h1>
+
+        <span class="star-query">
+            <button aria-label="Find star sign" onClick="openStarModal()">
+                <svg width="40" height="40">
+                    <circle cx="20" cy="20" r="15" stroke-width="2" fill="#000000" />
+                    <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="1em" dy=".4em">*</text>
+                    *
+                </svg>
+            </button>
+            <span class="star-query-text">Get Star Sign Details</span>
+        </span>
+
         <span class="tool-tip">
             <button aria-label="how to play" onClick="openHelpModal()">
                 <svg width="40" height="40">
@@ -93,13 +108,13 @@
                             <img class="game-card-img" src="assets/img/8.jpg" alt="cake8">
                         </td>
                     </tr>
-                </tbody>               
+                </tbody>
             </table>
             <div class="restart-button-div">
                 <button class="restart-button brown-button" id="restartButton" onClick="startGame()">Restart ↻</button>
             </div>
         </section>
-        
+
         <!--Modal on game over -->
         <div class="modal" id="gameOverModal">
             <div class="modal-content">
@@ -120,6 +135,26 @@
                     <button class="brown-button" onClick="playAgain()">Play Again &nbsp;😀</button>
                 </div>
             </div>
+        </div>
+
+        <!-- Modal to Look for Star Sign and query API to get results -->
+        <div class="modal" id="starModal">
+            <div class="modal-content">
+                <span aria-label="close" role="button" class="close" onClick="closeStarModal()">&times;</span>
+                <div class="modal-header">
+                    <h2>Enter Star Sign</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="help-tips">
+                        <p>Aztro output here....</p>
+                        <button onclick="starSignInfo()">Fetch</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="brown-button" onClick="closeStarModal()">Close</button>
+            </div>
+        </div>
         </div>
 
         <!-- Modal to display Game Instructions -->
@@ -180,5 +215,5 @@
     <script src="assets/js/main.js"></script>
     <noscript>Oops!!! Sorry, you cannot play this game. Your broswer does not support Javascript.</noscript>
 </body>
-</html>
 
+</html>
