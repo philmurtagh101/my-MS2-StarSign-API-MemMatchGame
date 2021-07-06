@@ -9,9 +9,20 @@
       starModal.classList.remove('show-modal');
   }
 
-  //API Fetch - Test with Taurus
+  //API Fetch - Test with Leo
   function starSignInfo() {
-      fetch("https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=Taurus&day=today", {
+      var xxxx;
+      var url = "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=Leo&day=today";
+      starSignFetch(url, printdata);
+      printdata(xxxx);
+  }
+
+  function printdata(zzz) {
+      console.log(zzz.color);
+  }
+
+  function starSignFetch(url, callback) {
+      fetch(url, {
               "method": "POST",
               "headers": {
                   "x-rapidapi-key": "5258de36e5msh6a52293d8493026p1b55e1jsn9c8aface1d54",
@@ -21,6 +32,7 @@
           .then(response => response.json())
           .then(data => {
               console.log(data);
+              callback(data);
           })
           .catch(err => {
               console.error(err);
