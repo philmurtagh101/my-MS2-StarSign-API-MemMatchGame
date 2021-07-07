@@ -278,7 +278,8 @@ h1 {
     width: 4.5em;
     height: 4.5em;
     background-color: #be0808;
-    background-image: url("/assets/img/zodiac_card.jpg");
+
+    /*background-image: url("/assets/img/zodiac_card.jpg");*/
     background-position: center;
     background-size: cover;
     border-radius: 0.3em;

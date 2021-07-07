@@ -146,8 +146,37 @@
                 </div>
                 <div class="modal-body">
                     <div class="help-tips">
+                        <!--Get input for Star Sign here-->
+                        <label for="starsign">Choose your Star Sign:</label>
+                        <select id="getstarsign">
+                            <option value="Aquarius" selected>Aquarius</option>
+                            <option value="Pisces">Pisces</option>
+                            <option value="Aries">Aries</option>
+                            <option value="Taurus">Taurus</option>
+                            <option value="Gemini">Gemini</option>
+                            <option value="Cancer">Cancer</option>
+                            <option value="Leo">Leo</option>
+                            <option value="Virgo">Virgo</option>
+                            <option value=" Libra">Libra</option>
+                            <option value="Scorpio">Scorpio</option>
+                            <option value="Sagittarius">Sagittarius</option>
+                            <option value="Capricorn">Capricorn</option>
+                        </select>
+                        <p>
+                            Star Sign selected is...
+                            <span class="selectedstarsign"></span>
+                        </p>
+                        <button onclick="getStarsign()">Get Star Sign</button>
+
                         <p>Aztro output here....</p>
-                        <button onclick="starSignInfo()">Fetch</button>
+                        <button onclick=" starSignInfo()">Fetch</button>
+                        <p>
+                            Description:
+                            <span id="starsigndes"></span>
+                            <br>
+                            Color:
+                            <span id="starcolor"></span>
+                        </p>
                     </div>
                 </div>
             </div>

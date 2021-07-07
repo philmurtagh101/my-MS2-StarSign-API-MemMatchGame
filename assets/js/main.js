@@ -1,5 +1,6 @@
   //Get Star Sign and query and show Aztro API results
   const starModal = document.getElementById('starModal');
+  var starsignSelected
 
   function openStarModal() {
       starModal.classList.add('show-modal');
@@ -8,17 +9,27 @@
   function closeStarModal() {
       starModal.classList.remove('show-modal');
   }
-
-  //API Fetch - Test with Leo
+  // Get Star Sign
+  function getStarsign() {
+      let selectElement = document.querySelector('#getstarsign');
+      starsignSelected = selectElement.value;
+      document.querySelector('.selectedstarsign').textContent = starsignSelected;
+      document.querySelector('.game-card').style.backgroundImage = `url("/assets/img/${starsignSelected}.jpg")`;
+  }
+  //API Fetch - using starsignSelected
   function starSignInfo() {
       var xxxx;
-      var url = "https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=Leo&day=today";
-      starSignFetch(url, printdata);
-      printdata(xxxx);
+      var url = `https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=${starsignSelected}&day=today`;
+      console.log("Testing...", url);
+      starSignFetch(url, starSigndata);
+      starSigndata(xxxx);
   }
 
-  function printdata(zzz) {
+  function starSigndata(zzz) {
+      console.log(zzz.description)
+      document.querySelector('#starsigndes').textContent = zzz.description;
       console.log(zzz.color);
+      document.querySelector('#starcolor').textContent = zzz.color;
   }
 
   function starSignFetch(url, callback) {
