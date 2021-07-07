@@ -14,7 +14,12 @@
       let selectElement = document.querySelector('#getstarsign');
       starsignSelected = selectElement.value;
       document.querySelector('.selectedstarsign').textContent = starsignSelected;
-      document.querySelector('.game-card').style.backgroundImage = `url("/assets/img/${starsignSelected}.jpg")`;
+
+      //change Star Sign on back of each card
+      let cardBackImages = document.querySelectorAll('.game-card');
+      [].forEach.call(cardBackImages, function(cardBackImage) {
+          cardBackImage.style.backgroundImage = `url("/assets/img/${starsignSelected}.jpg")`;
+      });
   }
   //API Fetch - using starsignSelected
   function starSignInfo() {

@@ -1,0 +1,10 @@
+8 items
+"date_range":"Jan 20 - Feb 18"
+"current_date":"June 29, 2021"
+"description":"You see things that almost everyone else is missing -- details that are much more important than they appear. Keep poking and prodding until you get a better sense of the big picture."
+"compatibility":"Cancer"
+"mood":"Thoughtful"
+"color":"Copper"
+"lucky_number":"30"
+"lucky_time":"11pm"
+}
