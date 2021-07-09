@@ -29,14 +29,14 @@
       starSignFetch(url, starSigndata);
       starSigndata(xxxx);
   }
-
+  //Pull out data for display
   function starSigndata(zzz) {
       console.log(zzz.description)
       document.querySelector('#starsigndes').textContent = zzz.description;
       console.log(zzz.color);
       document.querySelector('#starcolor').textContent = zzz.color;
   }
-
+  //API Fetch 
   function starSignFetch(url, callback) {
       fetch(url, {
               "method": "POST",
@@ -171,6 +171,13 @@
       if (len === 2) {
           moveCounter();
           if (openedCards[0].type === openedCards[1].type) {
+              console.log("match test", openedCards[0].type); //see what .type is looking like.
+
+              // check if 2 woo cards are matched and run the woowoo
+              if (openedCards[0].type === "woo") {
+                  console.log("KaBoom! Start the woo function");
+                  // woowoo();
+              }
               matched();
           } else {
               unmatched();
@@ -278,7 +285,7 @@
           }
       }, 1000)
   }
-
+  //game wrap-up and display Horoscope readout here or a "woo woo" YOU FAILED!!! 
   function endGame() {
       clearInterval(interval);
       totalGameTime = timer.innerHTML;
