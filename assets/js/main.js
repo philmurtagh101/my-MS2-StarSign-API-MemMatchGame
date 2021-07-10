@@ -31,7 +31,7 @@
   }
   //Pull out data for display
   function starSigndata(zzz) {
-      console.log(zzz.description)
+      console.log(zzz.description);
       document.querySelector('#starsigndes').textContent = zzz.description;
       console.log(zzz.color);
       document.querySelector('#starcolor').textContent = zzz.color;
@@ -126,9 +126,8 @@
 
       //listen for events on the cards
       for (let i = 0; i < cardElementsArray.length; i++) {
-          cardElementsArray[i].addEventListener("click", displayCard)
+          cardElementsArray[i].addEventListener("click", displayCard);
       }
-
       //when game starts show all the cards for a split second
       flashCards();
 
@@ -148,11 +147,11 @@
 
   function flashCards() {
       for (i = 0; i < cardElements.length; i++) {
-          cardElements[i].children[0].classList.add("show-img")
+          cardElements[i].children[0].classList.add("show-img");
       }
       setTimeout(function() {
           for (i = 0; i < cardElements.length; i++) {
-              cardElements[i].children[0].classList.remove("show-img")
+              cardElements[i].children[0].classList.remove("show-img");
           }
       }, 1000)
   }
@@ -171,13 +170,6 @@
       if (len === 2) {
           moveCounter();
           if (openedCards[0].type === openedCards[1].type) {
-              console.log("match test", openedCards[0].type); //see what .type is looking like.
-
-              // check if 2 woo cards are matched and run the woowoo
-              if (openedCards[0].type === "woo") {
-                  console.log("KaBoom! Start the woo function");
-                  // woowoo();
-              }
               matched();
           } else {
               unmatched();
@@ -209,22 +201,22 @@
           openedCards[1].children[0].classList.remove('show-img');
           enable();
           openedCards = [];
-
-      }, 1100)
+      }, 500)
   }
 
   function disable() {
-      cardElementsArray.filter((card, i, cardElementsArray) => {
+      cardElementsArray.filter((card) => {
           card.classList.add('disabled');
       })
   }
 
   function enable() {
-      cardElementsArray.filter((card, i, cardElementsArray) => {
+      cardElementsArray.filter((card) => {
           card.classList.remove('disabled');
-          for (let i = 0; i < matchedCards.length; i++) {
-              matchedCards[i].classList.add('disabled');
-          }
+          //
+          //for (let i = 0; i < matchedCards.length; i++) {
+          //   matchedCards[i].classList.add('disabled');
+          //}
       })
   }
 
@@ -285,7 +277,7 @@
           }
       }, 1000)
   }
-  //game wrap-up and display Horoscope readout here or a "woo woo" YOU FAILED!!! 
+  //game wrap-up
   function endGame() {
       clearInterval(interval);
       totalGameTime = timer.innerHTML;
@@ -303,6 +295,17 @@
       closeModal();
   }
 
+  //wooWoo Function to indicate a fail.
+  function woowoo() {
+      //show modal for woo woo fail
+      document.getElementById('woowooModal').classList.add("show-modal");
+      matchedCards = [];
+      closeModalIcon.addEventListener("click", function() {
+          document.getElementById('woowooModal').classList.remove("show-modal");
+          startGame();
+      })
+  }
+
   function closeModal() {
       closeModalIcon.addEventListener("click", function() {
           modalElement.classList.remove("show-modal");
@@ -315,9 +318,14 @@
       startGame();
   }
 
+  function playAgainWoo() {
+      document.getElementById('woowooModal').classList.remove("show-modal");
+      startGame();
+  }
+
   // wait for some milliseconds before game starts
   window.onload = function() {
       setTimeout(function() {
-          startGame()
+          startGame();
       }, 1200);
   }
