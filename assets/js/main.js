@@ -20,6 +20,7 @@
       [].forEach.call(cardBackImages, function(cardBackImage) {
           cardBackImage.style.backgroundImage = `url("/assets/img/${starsignSelected}.jpg")`;
       });
+      starSignInfo()
   }
   //API Fetch - using starsignSelected
   function starSignInfo() {
@@ -153,7 +154,7 @@
           for (i = 0; i < cardElements.length; i++) {
               cardElements[i].children[0].classList.remove("show-img");
           }
-      }, 1000)
+      }, 3000)
   }
 
   function displayCard() {
@@ -170,6 +171,10 @@
       if (len === 2) {
           moveCounter();
           if (openedCards[0].type === openedCards[1].type) {
+              //Check first if matched cards are woo
+              if (openedCards[0].type === "woo") {
+                  woowoo();
+              }
               matched();
           } else {
               unmatched();
@@ -185,7 +190,8 @@
       matchedCards.push(openedCards[0]);
       matchedCards.push(openedCards[1]);
       openedCards = [];
-      if (matchedCards.length == 16) {
+      //match 7 pairs =14  -> 1 pair short of a woo pairing
+      if (matchedCards.length == 14) {
           endGame();
       }
   }
@@ -318,6 +324,7 @@
       startGame();
   }
 
+  //restart game after a woo woo blunder and close the modal
   function playAgainWoo() {
       document.getElementById('woowooModal').classList.remove("show-modal");
       startGame();
