@@ -13,17 +13,21 @@
     <header>
 
         <h1>Star Sign Memory Matching Game </h1>
-
-        <span class="star-query">
-            <button aria-label="Find star sign" onClick="openStarModal()">
-                <svg width="40" height="40">
-                    <circle cx="20" cy="20" r="15" stroke-width="2" fill="#000000" />
-                    <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="1em" dy=".4em">*</text>
-                    *
-                </svg>
-            </button>
-            <span class="star-query-text">Get Star Sign Details</span>
-        </span>
+        <div>
+            <!-- present set of buttons to select a star sign-->
+            <input type="button" value="Aquarius" onclick="getStarsign(this.value)">
+            <input type="button" value="Pisces" onclick="getStarsign(this.value)">
+            <input type="button" value="Aries" onclick="getStarsign(this.value)">
+            <input type="button" value="Taurus" onclick="getStarsign(this.value)">
+            <input type="button" value="Gemini" onclick="getStarsign(this.value)">
+            <input type="button" value="Cancer" onclick="getStarsign(this.value)">
+            <input type="button" value="Leo" onclick="getStarsign(this.value)">
+            <input type="button" value="Virgo" onclick="getStarsign(this.value)">
+            <input type="button" value="Libra" onclick="getStarsign(this.value)">
+            <input type="button" value="Scorpio" onclick="getStarsign(this.value)">
+            <input type="button" value="Sagittarius" onclick="getStarsign(this.value)">
+            <input type="button" value="Capricorn" onclick="getStarsign(this.value)">
+        </div>
 
         <span class="tool-tip">
             <button aria-label="how to play" onClick="openHelpModal()">
@@ -162,49 +166,6 @@
             </div>
         </div>
 
-        <!-- Modal to Look for Star Sign and query API to get results -->
-        <div class="modal" id="starModal">
-            <div class="modal-content">
-                <span aria-label="close" role="button" class="close" onClick="closeStarModal()">&times;</span>
-                <div class="modal-header">
-                    <h2>Enter Star Sign</h2>
-                </div>
-                <div class="modal-body">
-                    <div class="help-tips">
-                        <!--Get input for Star Sign here-->
-                        <label for="starsign">Choose your Star Sign:</label>
-                        <select id="getstarsign">
-                            <option value="Aquarius" selected>Aquarius</option>
-                            <option value="Pisces">Pisces</option>
-                            <option value="Aries">Aries</option>
-                            <option value="Taurus">Taurus</option>
-                            <option value="Gemini">Gemini</option>
-                            <option value="Cancer">Cancer</option>
-                            <option value="Leo">Leo</option>
-                            <option value="Virgo">Virgo</option>
-                            <option value="Libra">Libra</option>
-                            <option value="Scorpio">Scorpio</option>
-                            <option value="Sagittarius">Sagittarius</option>
-                            <option value="Capricorn">Capricorn</option>
-                        </select>
-                        <p>
-                            Star Sign selected is...
-                            <span class="selectedstarsign"></span>
-                        </p>
-                        <button onclick="getStarsign()">Get Star Sign</button>
-                        <!--
-                        <p>Aztro output here....</p>
-                        <button onclick="starSignInfo()">Fetch</button>
-                        -->
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="brown-button" onClick="closeStarModal()">Close</button>
-            </div>
-        </div>
-        </div>
-
         <!-- Modal to display Game Instructions -->
         <div class="modal" id="helpModal">
             <div class="modal-content">
@@ -255,6 +216,7 @@
         <p>Recognition of original memory game from Aniuchi Adaobi</p>
     </footer>
     <script src="assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -2,6 +2,7 @@
   const starModal = document.getElementById('starModal');
   var starsignSelected
 
+
   function openStarModal() {
       starModal.classList.add('show-modal');
   }
@@ -10,10 +11,13 @@
       starModal.classList.remove('show-modal');
   }
   // Get Star Sign
-  function getStarsign() {
-      let selectElement = document.querySelector('#getstarsign');
-      starsignSelected = selectElement.value;
-      document.querySelector('.selectedstarsign').textContent = starsignSelected;
+  function getStarsign(starValue) {
+      //let selectElement = document.querySelector('#getstarsign');
+      //starsignSelected = selectElement.value;
+
+      starsignSelected = starValue;
+      //document.querySelector('.selectedstarsign').textContent = starsignSelected;
+
 
       //change Star Sign on back of each card
       let cardBackImages = document.querySelectorAll('.game-card');
