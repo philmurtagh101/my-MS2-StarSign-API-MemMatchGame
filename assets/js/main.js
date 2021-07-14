@@ -2,13 +2,13 @@ $(document).ready(function() {
     $("section").removeClass("sectionhide");
     $("section").hide();
     $("input").click(function() {
-        $("input").hide(2000);
+        $(".stargamesetup").hide(2000);
         $("section").show(2000);
         flashCards();
     });
     $("#restartButton,.new-starsign").click(function() {
         $("section").hide(2000);
-        $("input").show(2000);
+        $(".stargamesetup").show(2000);
     });
 });
 
