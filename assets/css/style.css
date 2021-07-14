@@ -434,6 +434,11 @@ h1 {
     padding: 0 1.5em;
 }
 
+/*Section Hide - JQuery will remove*/
+.sectionhide {
+    display: none;
+}
+
 /* Animations */
 @keyframes animateTop {
     from {

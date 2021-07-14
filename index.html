@@ -5,28 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Star Sign Memory Matching Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <title>Star Sign Memory Matching Game</title>
 </head>
+
 
 <body>
     <header>
 
         <h1>Star Sign Memory Matching Game </h1>
-        <div>
+        <div class="container">
             <!-- present set of buttons to select a star sign-->
-            <input type="button" value="Aquarius" onclick="getStarsign(this.value)">
-            <input type="button" value="Pisces" onclick="getStarsign(this.value)">
-            <input type="button" value="Aries" onclick="getStarsign(this.value)">
-            <input type="button" value="Taurus" onclick="getStarsign(this.value)">
-            <input type="button" value="Gemini" onclick="getStarsign(this.value)">
-            <input type="button" value="Cancer" onclick="getStarsign(this.value)">
-            <input type="button" value="Leo" onclick="getStarsign(this.value)">
-            <input type="button" value="Virgo" onclick="getStarsign(this.value)">
-            <input type="button" value="Libra" onclick="getStarsign(this.value)">
-            <input type="button" value="Scorpio" onclick="getStarsign(this.value)">
-            <input type="button" value="Sagittarius" onclick="getStarsign(this.value)">
-            <input type="button" value="Capricorn" onclick="getStarsign(this.value)">
+            <div class="row mx-auto">
+                <input class="col" src="/assets/img/Aquarius.jpg" type="image" width="100%" height="auto" value=" Aquarius" onclick="getStarsign(this.value)">
+                <input class="col" src="/assets/img/Pisces.jpg" type="image" width="100%" height="auto" value="Pisces" onclick="getStarsign(this.value)">
+                <input class="col" src="/assets/img/Aries.jpg" type="image" width="100%" height="auto" value="Aries" onclick="getStarsign(this.value)">
+                <input class="col" src="/assets/img/Taurus.jpg" type="image" width="100%" height="auto" value="Taurus" onclick="getStarsign(this.value)">
+            </div>
+            <div class="row mx-auto">
+                <input class="col" src="/assets/img/Gemini.jpg" type="image" width="100%" height="auto" value="Gemini" onclick="getStarsign(this.value)">
+                <input class="col" src="/assets/img/Cancer.jpg" type="image" width="100%" height="auto" value="Cancer" onclick="getStarsign(this.value)">
+                <input class="col" src="/assets/img/Leo.jpg" type="image" width="100%" height="auto" value="Leo" onclick="getStarsign(this.value)">
+                <input class="col" src="/assets/img/Virgo.jpg" type="image" width="100%" height="auto" value="Virgo" onclick="getStarsign(this.value)">
+            </div>
+            <div class="row mx-auto">
+                <input class="col" src="/assets/img/Libra.jpg" type="image" width="100%" height="auto" value="Libra" onclick="getStarsign(this.value)">
+                <input class="col" src="/assets/img/Scorpio.jpg" type="image" width="100%" height="auto" value="Scorpio" onclick="getStarsign(this.value)">
+                <input class="col" src="/assets/img/Sagittarius.jpg" type="image" width="100%" height="auto" value="Sagittarius" onclick="getStarsign(this.value)">
+                <input class="col" src="/assets/img/Capricorn.jpg" type="image" width="100%" height="auto" value="Capricorn" onclick="getStarsign(this.value)">
+            </div>
         </div>
 
         <span class="tool-tip">
@@ -41,7 +49,7 @@
         </span>
     </header>
     <main>
-        <section>
+        <section class="sectionhide">
             <div class="game-status-details">
                 <div class="rating">
                     <span class="star">🌟</span>

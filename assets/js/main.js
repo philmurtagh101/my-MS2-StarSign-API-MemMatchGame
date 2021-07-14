@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $("section").removeClass("sectionhide");
     $("section").hide();
     $("input").click(function() {
         $("input").hide(2000);
