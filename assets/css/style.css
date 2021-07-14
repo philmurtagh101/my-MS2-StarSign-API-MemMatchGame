@@ -279,7 +279,7 @@ h1 {
     height: 4.5em;
     background-color: #be0808;
     /* Set Initial Background to the Zodiac */
-    background-image: url("/assets/img/zodiac_card.jpg");
+    background-image: url("git assets/img/zodiac_card.jpg");
     background-position: center;
     background-size: cover;
     border-radius: 0.3em;

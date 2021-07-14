@@ -36,7 +36,7 @@ function getStarsign(starValue) {
     //change Star Sign on back of each card
     let cardBackImages = document.querySelectorAll('.game-card');
     [].forEach.call(cardBackImages, function(cardBackImage) {
-        cardBackImage.style.backgroundImage = `url("/assets/img/${starsignSelected}.jpg")`;
+        cardBackImage.style.backgroundImage = `url("assets/img/${starsignSelected}.jpg")`;
     });
     starSignInfo()
 }
