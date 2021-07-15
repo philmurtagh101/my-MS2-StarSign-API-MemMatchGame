@@ -19,7 +19,7 @@
             <!-- present set of buttons to select a star sign-->
             <div class="row mx-auto">
                 <div class=" col-xs-6">
-                    <input src="assets/img/Aquarius.jpg" type="image" width="50%" value=" Aquarius" onclick="getStarsign(this.value)">
+                    <input src="assets/img/Aquarius.jpg" type="image" width="50%" value="Aquarius" onclick="getStarsign(this.value)">
                     <h2>Aquarius</h2>
                     <p>20 Jan - 19 Feb</p>
                 </div>
@@ -184,7 +184,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="message">
-                        <p>You need to try harder if you are what to know what the day brings</p>
+                        <p>2 WOOs!!! Try again to know what the day brings</p>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -208,11 +208,10 @@
                         </p>
                         <p>Your rating is: <span id="finalStarRating"></span></p>
                         <p>
-                            Star Sign Description:
-                            <span id="starsigndes"></span>
+                            Horoscope for the Day:<span> </span> <span id="starsigndes"></span>
                             <br>
-                            Star Sign color:
-                            <span id="starcolor"></span>
+                            Lucky Colour:
+                            <span> </span><span id="starcolor"></span>
                         </p>
                     </div>
                 </div>
@@ -231,8 +230,10 @@
                 </div>
                 <div class="modal-body">
                     <div class="help-tips">
-                        <p>This is a Matching Game used to test your memory retention abilities</p>
-                        <p>The game consists of:</p>
+                        <p>This is a game that looks for your Star Sign</p>
+                        <p>and then sets up a card pairing game to test your memory</p>
+                        <p>On successful completion, you get your horoscope reading for the day</p>
+                        <p>The game itself consists of:</p>
                         <ul>
                             <li>&diams; A game board with 16 cards - 8 matching pairs of cards</li>
                             <li>&diams; A game status indicator which consists of :
@@ -245,20 +246,23 @@
                             </li>
                             <li>&diams; A larger restart button.</li>
                         </ul>
-                        <p>When the page loads the game starts.</p>
+                        <p>When the page loads, you are asked to choose your Star Sign and then the game starts.</p>
                         <p>All the 8 pairs of cards i.e 16 cards are flashed</p>
                         <p>How to play:</p>
                         <ul>
-                            <li>&bullet; Click on a black square to reveal the card</li>
-                            <li>&bullet; Click on a second black square to reveal the card
+                            <li>&bullet; Click on a square to reveal the card</li>
+                            <li>&bullet; Click on a second square to reveal the card
                                 <ul>
                                     <li>a. If the two cards match, the cards stay revealed.</li>
                                     <li>b. If there is no match, the cards are hidden and you can click another pair.</li>
+                                    <li> WARNING!!! If you click on 2 WOO cards, the game ends abruptly. DO NOT click 2 WOOs or you need to start game again and you dont see your Horoscope</li>
                                 </ul>
                             </li>
+
                             <li>&bullet; You can click either of the restart buttons <em>↻</em> or <em>Restart ↻</em> at any point in time to start all over.</li>
-                            <li>&bullet; When you have correctly matched all 8 pairs of cards, the game ends and your total game time, total number of moves and rating will be displayed.</li>
-                            <li>&bullet; You can click the <em>Play Again</em> in the modal that pops up to start a new game.</li>
+                            <li>&bullet; When you have correctly matched all cards (exceptthe WOOs), the game ends and your total game time, total number of moves and rating will be displayed.</li>
+                            <li>&bullet; As a bonus, you get your Horoscope reading for the day and your lucky colour</li>
+                            <li>&bullet; You can click the <em>New Star Sign</em> and you are brought back to the Star Sign Selection area</li>
                         </ul>
                     </div>
                 </div>
