@@ -1,4 +1,4 @@
-html,
+/*html,
 body,
 div,
 span,
@@ -83,6 +83,7 @@ video {
     font: inherit;
     vertical-align: baseline;
 }
+*/
 
 body {
     font-family: monospace, Arial, Helvetica, sans-serif;
@@ -142,7 +143,7 @@ h1 {
     text-align: center;
     font-size: 2em;
     padding: 0.6em;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 
 .star-query {
@@ -264,7 +265,7 @@ h1 {
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #6ae414;
+    background-color: chartreuse;
     border-radius: 0.3em;
     box-shadow: 0 5px 5px #6316df;
 }

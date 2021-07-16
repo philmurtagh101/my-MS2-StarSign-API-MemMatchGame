@@ -14,77 +14,7 @@
 <body>
     <header>
 
-        <h1>Horoscope Memory Matching Game </h1>
-        <div class="container-fluid stargamesetup text-center">
-            <!-- present set of buttons to select a star sign-->
-            <div class="row mx-auto">
-                <div class=" col-xs-6">
-                    <input src="assets/img/Aquarius.jpg" type="image" width="50%" value="Aquarius" onclick="getStarsign(this.value)">
-                    <h2>Aquarius</h2>
-                    <p>20 Jan - 19 Feb</p>
-                </div>
-                <div class="col-xs-6">
-                    <input src="assets/img/Pisces.jpg" type="image" width="50%" value="Pisces" onclick="getStarsign(this.value)">
-                    <p>Pisces</p>
-                    <p>20 Feb - 20 Mar</p>
-                </div>
-                <div class="col-xs-6">
-                    <input src="assets/img/Aries.jpg" type="image" width="50%" value="Aries" onclick="getStarsign(this.value)">
-                    <p>Aries</p>
-                    <p>21 Mar - 20 Apr</p>
-                </div>
-                <div class="col-xs-6">
-                    <input src="assets/img/Taurus.jpg" type="image" width="50%" value="Taurus" onclick="getStarsign(this.value)">
-                    <p>Taurus</p>
-                    <p>21 Apr - 20 May</p>
-                </div>
-            </div>
-            <div class="row py-3 mx-auto">
-                <div class="col-xs-6">
-                    <input src="assets/img/Gemini.jpg" type="image" width="50%" value="Gemini" onclick="getStarsign(this.value)">
-                    <h3>Gemini</h3>
-                    <p>21 May - 21 Jun</p>
-                </div>
-                <div class="col-xs-6">
-                    <input src="assets/img/Cancer.jpg" type="image" width="50%" value="Cancer" onclick="getStarsign(this.value)">
-                    <p>Cancer</p>
-                    <p>22 Jun - 22 Jul</p>
-                </div>
-                <div class="col-xs-6">
-                    <input src="assets/img/Leo.jpg" type="image" width="50%" value="Leo" onclick="getStarsign(this.value)">
-                    <p>Leo</p>
-                    <p>23 Jul - 23 Aug</p>
-                </div>
-                <div class="col-xs-6">
-                    <input src="assets/img/Virgo.jpg" type="image" width="50%" value="Virgo" onclick="getStarsign(this.value)">
-                    <p>Virgo</p>
-                    <p>24 Aug - 22 Sep</p>
-                </div>
-            </div>
-            <div class="row mx-auto">
-                <div class="col-xs-6">
-                    <input src="assets/img/Libra.jpg" type="image" width="50%" value="Libra" onclick="getStarsign(this.value)">
-                    <p>Libra</p>
-                    <p>23 Sep - 22 Oct</p>
-                </div>
-                <div class="col-xs-6">
-                    <input src="assets/img/Scorpio.jpg" type="image" width="50%" value="Scorpio" onclick="getStarsign(this.value)">
-                    <p>Scorpio</p>
-                    <p>23 Oct - 21 Nov</p>
-                </div>
-                <div class="col-xs-6">
-                    <input src="assets/img/Sagittarius.jpg" type="image" width="50%" value="Sagittarius" onclick="getStarsign(this.value)">
-                    <p>Sagittarius</p>
-                    <p>22 Nov - 19 Dec</p>
-                </div>
-                <div class="col-xs-6">
-                    <input src="assets/img/Capricorn.jpg" type="image" width="50%" value="Capricorn" onclick="getStarsign(this.value)">
-                    <p>Capricorn</p>
-                    <p>20 Dec - 19 Jan</p>
-                </div>
-            </div>
-        </div>
-
+        <h1 class="jumbotron">Horoscope Memory Matching Game</h1>
         <span class="tool-tip">
             <button aria-label="how to play" onClick="openHelpModal()">
                 <svg width="40" height="40">
@@ -95,6 +25,75 @@
             </button>
             <span class="tool-tip-text">How to Play</span>
         </span>
+        <div class="container-fluid stargamesetup text-center">
+            <!-- present set of buttons to select a star sign-->
+            <div class="row ">
+                <div class="col-xs-6 col-lg-3 mx-auto">
+                    <input src="assets/img/Aquarius.jpg" type="image" width="50%" value="Aquarius" onclick="getStarsign(this.value)">
+                    <h3>Aquarius</h3>
+                    <p>20 Jan - 19 Feb</p>
+                </div>
+                <div class="col-xs-6 col-lg-3 mx-auto">
+                    <input src="assets/img/Pisces.jpg" type="image" width="50%" value="Pisces" onclick="getStarsign(this.value)">
+                    <h3>Pisces</h3>
+                    <p>20 Feb - 20 Mar</p>
+                </div>
+                <div class="col-xs-6 col-lg-3 mx-auto">
+                    <input src="assets/img/Aries.jpg" type="image" width="50%" value="Aries" onclick="getStarsign(this.value)">
+                    <h3>Aries</h3>
+                    <p>21 Mar - 20 Apr</p>
+                </div>
+                <div class="col-xs-6 col-lg-3 mx-auto">
+                    <input src="assets/img/Taurus.jpg" type="image" width="50%" value="Taurus" onclick="getStarsign(this.value)">
+                    <h3>Taurus</h3>
+                    <p>21 Apr - 20 May</p>
+                </div>
+            </div>
+            <div class="row py-3">
+                <div class="col-xs-6 col-md-3 mx-auto">
+                    <input src="assets/img/Gemini.jpg" type="image" width="50%" value="Gemini" onclick="getStarsign(this.value)">
+                    <h3>Gemini</h3>
+                    <p>21 May - 21 Jun</p>
+                </div>
+                <div class="col-xs-6 col-md-3 mx-auto">
+                    <input src="assets/img/Cancer.jpg" type="image" width="50%" value="Cancer" onclick="getStarsign(this.value)">
+                    <h3>Cancer</h3>
+                    <p>22 Jun - 22 Jul</p>
+                </div>
+                <div class="col-xs-6 col-md-3 mx-auto">
+                    <input src="assets/img/Leo.jpg" type="image" width="50%" value="Leo" onclick="getStarsign(this.value)">
+                    <h3>Leo</h3>
+                    <p>23 Jul - 23 Aug</p>
+                </div>
+                <div class="col-xs-6 col-md-3 mx-auto">
+                    <input src="assets/img/Virgo.jpg" type="image" width="50%" value="Virgo" onclick="getStarsign(this.value)">
+                    <h3>Virgo</h3>
+                    <p>24 Aug - 22 Sep</p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-xs-6 col-md-3 mx-auto">
+                    <input src="assets/img/Libra.jpg" type="image" width="50%" value="Libra" onclick="getStarsign(this.value)">
+                    <h3>Libra</h3>
+                    <p>23 Sep - 22 Oct</p>
+                </div>
+                <div class="col-xs-6 col-md-3 mx-auto">
+                    <input src="assets/img/Scorpio.jpg" type="image" width="50%" value="Scorpio" onclick="getStarsign(this.value)">
+                    <h3>Scorpio</h3>
+                    <p>23 Oct - 21 Nov</p>
+                </div>
+                <div class="col-xs-6 col-md-3 mx-auto">
+                    <input src="assets/img/Sagittarius.jpg" type="image" width="50%" value="Sagittarius" onclick="getStarsign(this.value)">
+                    <h3>Sagittarius</h3>
+                    <p>22 Nov - 19 Dec</p>
+                </div>
+                <div class="col-xs-6 col-md-3 mx-auto">
+                    <input src="assets/img/Capricorn.jpg" type="image" width="50%" value="Capricorn" onclick="getStarsign(this.value)">
+                    <h3>Capricorn</h3>
+                    <p>20 Dec - 19 Jan</p>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <section class="sectionhide">
@@ -230,19 +229,20 @@
                 </div>
                 <div class="modal-body">
                     <div class="help-tips">
-                        <p>This is a game that looks for your Star Sign</p>
-                        <p>and then sets up a card pairing game to test your memory</p>
+                        <p>This is a game that shows the daily Horoscope for your Star Sign</p>
+                        <p>on successfully completing a card pairing memory test.</p>
                         <p>On successful completion, you get your horoscope reading for the day</p>
                         <p>The game itself consists of:</p>
                         <ul>
                             <li>&diams; A game board with 16 cards - 8 matching pairs of cards</li>
-                            <li>&diams; A game status indicator which consists of :
-                                <ul>
-                                    <li>&diamond; A rating indicator - A list of stars which indicates your rating based on the number of your moves.</li>
-                                    <li>&diamond; A move counter - Indicates the number of moves you've made.</li>
-                                    <li>&diamond; A timer - Indicates the total number of time you take to match all cards.</li>
-                                    <li>&diamond; A restart button.</li>
-                                </ul>
+                            <li>whose backs are imprinted with the selected star signs.</li>
+                            <li>&diams; A game status indicator which consists of :</li>
+                            <ul>
+                                <li>&diamond; A rating indicator - A list of stars which indicates your rating based on the number of your moves.</li>
+                                <li>&diamond; A move counter - Indicates the number of moves you've made.</li>
+                                <li>&diamond; A timer - Indicates the total number of time you take to match all cards.</li>
+                                <li>&diamond; A restart button.</li>
+                            </ul>
                             </li>
                             <li>&diams; A larger restart button.</li>
                         </ul>
